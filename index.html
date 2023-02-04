@@ -1,4 +1,160 @@
-<div class="editor" contenteditable>
-      <h1>Simple Html editor</h1>
-      <p>Good to start</p>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my_wysiwyg</title>
+    <script src="./main.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body>
+    <header>
+        <h1>Rush wysiwyg</h1>
+    </header>
+    <main class="box-container">
+        <div class="tool-bar-container">
+            <button type="button" class="btn bold">
+                <span class="material-symbols-outlined">
+                    format_bold
+                </span>
+            </button>
+            <button type="button" class="btn italic">
+                <span class="material-symbols-outlined">
+                    format_italic
+                </span>
+            </button>
+            <button type="button" class="btn strikethrough">
+                <span class="material-symbols-outlined">
+                    format_strikethrough
+                </span>
+            </button>
+            <button class="btn font-color">
+                <span class="material-symbols-outlined">
+                    format_color_text
+                </span>
+            </button>
+            <button type="button" class="btn font-size">
+                <span class="material-symbols-outlined">
+                    format_size
+                </span>
+            </button>
+            <span class="separator">|</span>
+            <button type="button" class="btn link">
+                <span class="material-symbols-outlined">
+                    link
+                </span>
+            </button>
+            <span class="separator">|</span>
+            <button type="button" class="btn line-maximize">
+                <span class="material-symbols-outlined">
+                    maximize
+                </span>
+            </button>
+            <button type="button" class="btn line-minimize">
+                <span class="material-symbols-outlined">
+                    minimize
+                </span>
+            </button>
+            <span class="separator">|</span>
+            <button type="button" class="btn text-align-left">
+                <span class="material-symbols-outlined">
+                    format_align_left
+                </span>
+            </button>
+            <button type="button" class="btn text-align-right">
+                <span class="material-symbols-outlined">
+                    format_align_right
+                </span>
+            </button>
+            <button type="button" class="btn text-align-center">
+                <span class="material-symbols-outlined">
+                    format_align_center
+                </span>
+            </button>
+            <button type="button" class="btn text-align-justified">
+                <span class="material-symbols-outlined">
+                    format_align_justify
+                </span>
+            </button>
+            <span class="separator">|</span>
+            <button type="button" class="btn source-code source-code-display">
+                <span class="material-symbols-outlined">
+                    code
+                </span>
+                <span class="separator">/</span>
+                <span class="material-symbols-outlined">
+                    code_off
+                </span>
+            </button>
+        </div>
+        <div class="sheet-container">
+            <div class="sheet" contenteditable>
+                <p class="contain">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel commodo ante, eget lobortis
+                    tortor. Pellentesque lacinia nulla in urna consequat, sed consequat ipsum mollis. Maecenas quis sem
+                    faucibus dui posuere molestie in id felis. Integer ut risus dui. Donec sit amet lorem dolor.
+                    Suspendisse feugiat ultrices enim. Etiam orci ipsum, fringilla at lectus vitae, tempus interdum
+                    nibh. Mauris mollis libero odio, vel facilisis ipsum mollis id. Praesent tempor mauris a fringilla
+                    dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+                    Praesent eleifend ipsum quis sollicitudin commodo. Cras sit amet ipsum tempus, varius metus sit
+                    amet, dapibus purus. Nam luctus molestie neque, ac tincidunt mauris fringilla a. Cras pulvinar quis
+                    ante quis ullamcorper. Duis pellentesque odio felis, ac interdum nulla iaculis nec. Aliquam at
+                    volutpat metus. Pellentesque semper porta orci, vitae suscipit sem eleifend ac. In ac erat quam.
+                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam
+                    ante tellus, rhoncus ac ex eu, varius blandit tortor. Etiam congue metus eget congue mattis. Sed
+                    elementum a enim quis viverra. Aliquam cursus consequat augue ut faucibus. Donec tristique lorem non
+                    risus semper iaculis. Mauris aliquet sed lorem eget efficitur. Vestibulum ante ipsum primis in
+                    faucibus orci luctus et ultrices posuere cubilia curae;
+
+                    Curabitur maximus quam eu est placerat imperdiet. Suspendisse tellus urna, accumsan sit amet elit a,
+                    aliquet convallis neque. Ut sagittis facilisis augue, sit amet condimentum magna eleifend in. Fusce
+                    quam nisl, facilisis et faucibus et, imperdiet vitae dui. Pellentesque ut quam quis neque
+                    consectetur egestas tincidunt ut elit. Aenean posuere sem eu nunc molestie semper. Class aptent
+                    taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque
+                    consequat mauris magna. Etiam semper erat non congue convallis.
+
+                    Pellentesque hendrerit posuere aliquet. Fusce feugiat lacus urna, a consectetur nibh blandit
+                    volutpat. In sit amet sapien quis elit semper sagittis. Curabitur semper purus eget diam accumsan
+                    auctor. Suspendisse dapibus mattis fermentum. Ut ornare quam dignissim, suscipit ex id, blandit
+                    ante. Aenean eget enim auctor, blandit lectus a, congue enim. Aliquam egestas nunc venenatis nulla
+                    ullamcorper, at rhoncus sapien vestibulum. Cras auctor tempus lacus ac rutrum. Maecenas gravida,
+                    tellus eu sodales vehicula, arcu nunc euismod mauris, sit amet fermentum dolor sapien eget erat. Ut
+                    efficitur vulputate velit et dignissim. Vivamus vulputate dictum erat, id vehicula erat fermentum a.
+                    Nulla eu justo tristique, blandit neque a, elementum nisl. Quisque eget sodales ligula.
+
+                    Ut rutrum, nibh lacinia ullamcorper aliquet, lacus quam semper turpis, ac iaculis magna dolor a
+                    elit. Aenean dignissim leo ipsum, nec vehicula augue posuere viverra. Nam ultrices quis libero vitae
+                    volutpat. Maecenas posuere velit et lobortis sodales. Fusce risus orci, auctor et libero ac, rhoncus
+                    congue nisl. Aenean dignissim eleifend justo, id commodo augue tempor ac. Morbi nec magna quis massa
+                    elementum ultrices quis et eros. Fusce justo ex, posuere ac elit vel, tincidunt pellentesque nulla.
+                    Nam rhoncus dui at malesuada fringilla. Cras dignissim, ex vel vehicula pellentesque, diam dui
+                    fermentum ligula, sed vestibulum nunc orci auctor leo. Duis magna nisl, vehicula sit amet diam in,
+                    venenatis ornare neque. Ut dolor est, tempor eget nisl vitae, hendrerit viverra nulla.
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <!-- • Gras
+• Italique
+• Texte barré
+• Choix de la couleur
+• Taille de la police
+• Lien
+• Augmenter le trait
+• Diminuer le trait
+• Alignement du texte à gauche
+• Alignement du texte à droite
+• Alignement du texte au centre
+• Alignement du texte justifié
+• Switcher entre le code source généré et son affichage -->
+</body>
+
+</html>
