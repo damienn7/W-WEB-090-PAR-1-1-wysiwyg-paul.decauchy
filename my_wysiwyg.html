@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- à lancer en local host -->
+        <title>index.html</title>
+        <meta charset="utf-8">
+        <!-- <script src="jquery.js"></script> -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div>
+            <input type="button" value="B" id="bold">
+            <input type="button" value="I" id="italic">
+            <input type="button" value="S" id="strike">
+            <input type="button" value="F" id="font">
+            <input type="button" value="L" id="link">
+            <input type="button" value="+" id="plus">
+            <input type="button" value="-" id="minus">
+            <input type="button" value="LA" id="leftAlign">
+            <input type="button" value="RA" id="rightAlign">
+            <input type="button" value="C" id="center">
+            <input type="button" value="J" id="justifyContent">
+            <input type="button" value="?" id="à Comprendre">
+        </div> 
+        <textarea id="textarea">blabla <b>ooooh</b> <i>italique</i> <span class="red">oio</span>
+        </textarea>
+        <div id="textZone" contentEditable="true">
+            blabla <b>ooooh</b> <i>italique</i> <span class="red">oio</span>
+        </div>
+    </body>
+
+    <script type="module" src="./my_wysiwyg.js"></script>
+</html>
+
