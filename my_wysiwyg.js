@@ -1,4 +1,4 @@
-import { bold, italic,underline, strike, orange, purple, green, red, alignLeft, alignRight, alignCenter, justify } from './module.js';
+import { bold, italic,underline, strike, orange, purple, green, red, alignLeft, alignRight, alignCenter, justify, update } from './module.js';
 let text = document.getElementById("textZone");
 let textarea = document.getElementById("textarea");
 let bBold = document.getElementById("bold");
@@ -17,19 +17,21 @@ let bJustify = document.getElementById("justify");
 // let bBold = document.getElementById("bold");
 // let bBold = document.getElementById("bold");
 
-bBold.onclick = bold(textarea);
-bItalic.onclick = italic(textarea);
-bSurlign.onclick = underline(textarea);
-bStrike.onclick = strike(textarea);
-bOrange.onclick = orange(textarea);
-bPurple.onclick = purple(textarea);
-bGreen.onclick = green(textarea);
-bRed.onclick = red(textarea);
-bLeft.onclick = alignLeft(textarea);
-bRight.onclick = alignRight(textarea);
-bCenter.onclick = alignCenter(textarea);
-bJustify.onclick = justify(textarea);
+bBold.onclick = bold(text, textarea);
+bItalic.onclick = italic(text, textarea);
+bSurlign.onclick = underline(text, textarea);
+bStrike.onclick = strike(text, textarea);
+bOrange.onclick = orange(text, textarea);
+bPurple.onclick = purple(text, textarea);
+bGreen.onclick = green(text, textarea);
+bRed.onclick = red(text, textarea);
+bLeft.onclick = alignLeft(text, textarea);
+bRight.onclick = alignRight(text, textarea);
+bCenter.onclick = alignCenter(text, textarea);
+bJustify.onclick = justify(text, textarea);
 
-function update(){
+textarea.onkeyup = getUpdate;
+
+function getUpdate() {
     text.innerHTML = textarea.value;
 }
