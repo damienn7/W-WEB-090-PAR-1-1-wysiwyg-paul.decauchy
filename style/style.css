@@ -43,16 +43,16 @@ h1{
     flex-direction: row;
     justify-content: space-between;
     background-color: white;
-    height: 40px;
+    height: 60px;
     border: 1px solid gainsboro;
-    padding: 0 75px;
+    position: relative;
 }
 
 .sheet-container{
     background-color: #e3eae9;
     width: 100%;
     height: auto;
-    padding: 40px;
+    padding: 5%;
     border: 1px solid gainsboro;
 }
 
@@ -60,14 +60,14 @@ h1{
     background-color: white;
     width: 90%;
     margin: 0 5%;
-    height: auto;
-    padding: 125px;
-    font-size: 30px;
+    height: 50vh;
+    padding: 10%;
+    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     border: 1px solid gainsboro;
     resize: none;
-    overflow: auto;
-    line-height: 1.4;
+    overflow-y: scroll;
+    line-height: 1.6;
 }
 
 .btn{
@@ -88,7 +88,7 @@ h1{
     font-weight: 600;
     color: gainsboro;
     font-size: 30px;
-    margin: 0 20px;
+    margin: 7px 10px;
     cursor: default;
 }
 
@@ -98,4 +98,84 @@ h1{
     flex-direction: row;
     justify-content: space-between;
     padding: 0 5px;
+}
+
+@media (max-width: 1058px) {
+    .tool-bar-container{
+        height: 110px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 280px) {
+    .tool-bar-container{
+        height: 180px;
+        justify-content: space-evenly;
+    }
+
+    .box-container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+.purple{
+    background-color: purple;
+    border-radius: 10px;
+    z-index: 11;
+}
+
+.red{
+    background-color: crimson;
+    border-radius: 10px;
+    z-index: 11;
+}
+
+.green{
+    background-color: green;
+    border-radius: 10px;
+    z-index: 11;
+}
+
+.orange{
+    background-color: orangered;
+    border-radius: 10px;
+    z-index: 11;
+}
+
+.dropdown{
+    position:absolute;
+    height: auto;
+    width: 105px;
+    background-color: white;
+    border: 2px solid gainsboro;
+    border-radius: 20px;
+    top: 100%; 
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 40px;
+    height: 35px;
+}
+
+.color{
+    border: none;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    margin: 7px;
 }

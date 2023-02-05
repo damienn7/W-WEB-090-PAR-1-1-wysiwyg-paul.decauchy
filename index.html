@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my_wysiwyg</title>
-    <script src="./main.js" type="text/javascript"></script>
+    <!-- <script src="./main.js" type="text/javascript"></script> -->
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -34,9 +34,17 @@
                 </span>
             </button>
             <button class="btn font-color">
+
                 <span class="material-symbols-outlined">
                     format_color_text
                 </span>
+
+                <ul class="dropdown">
+                    <li class="color red"></li>
+                    <li class="color green"></li>
+                    <li class="color orange"></li>
+                    <li class="color purple"></li>
+                </ul>
             </button>
             <button type="button" class="btn font-size">
                 <span class="material-symbols-outlined">
@@ -93,8 +101,8 @@
             </button>
         </div>
         <div class="sheet-container">
-            <div class="sheet" contenteditable>
-                <p class="contain">
+            <div class="sheet" contenteditable="true">
+                <p class="contain" contenteditable="true">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel commodo ante, eget lobortis
                     tortor. Pellentesque lacinia nulla in urna consequat, sed consequat ipsum mollis. Maecenas quis sem
                     faucibus dui posuere molestie in id felis. Integer ut risus dui. Donec sit amet lorem dolor.
@@ -155,6 +163,7 @@
 • Alignement du texte au centre
 • Alignement du texte justifié
 • Switcher entre le code source généré et son affichage -->
+    <script type="module" src="./main.js"></script>
 </body>
 
 </html>
