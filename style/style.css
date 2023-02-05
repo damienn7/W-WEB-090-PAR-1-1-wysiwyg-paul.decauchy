@@ -21,6 +21,32 @@ header{
     height: 100px;
 }
 
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 50px;
+    padding:50px;
+    height:5%;
+}
+
+input{
+    border: none;
+    width: 300px;
+    height: 20px;
+    padding: 5px;
+    border: 1px solid gainsboro;
+}
+
+label{
+    margin-right: 20px;
+}
+
+.send{
+    background-color: green;
+    border-radius: 20px;
+}
+
 h1{
     margin: auto;
     letter-spacing: 2px;
@@ -72,7 +98,7 @@ h1{
 
 .btn{
     border: none;
-    width: 40px;
+    width: 30px;
     background-color: white;
     cursor: pointer;
     margin: 0 10px;
@@ -178,4 +204,36 @@ li{
     height: 35px;
     width: 35px;
     margin: 7px;
+}
+
+.left_{
+	text-align: left;
+}
+
+.right_{
+	text-align: right;
+}
+
+.center_{
+	text-align: center;
+}
+
+.justify_{
+	text-align: justify;
+}
+
+.orange_{
+	color: orange;
+}
+
+.purple_{
+	color: blueviolet;
+}
+
+.red_{
+	color: red;
+}
+
+.green_{
+	color: green;
 }

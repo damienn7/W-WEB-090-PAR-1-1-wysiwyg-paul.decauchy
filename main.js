@@ -1,58 +1,76 @@
+import { bold, italic,underline, strike, orange, purple, green, red, alignLeft, alignRight, alignCenter, justify, update } from './my_wysiwyg.js';
+// import { bold } from './my_wysiwyg.js';
 
-import { bold } from './my_wysiwyg.js';
+// let p = document.getElementsByClassName("contain")[0];
+// let bold_button = document.getElementsByClassName("bold")[0];
+// let sheet = document.getElementsByClassName("sheet")[0];
 
-document.getElementsByTagName("ul")[0].style.display = "none";
+// sheet.addEventListener('mouseup', (e) => {
+//     let selection = window.getSelection().toString();
 
-document.getElementsByClassName("font-color")[0].addEventListener("mouseover",()=>{
-    document.getElementsByTagName("ul")[0].style.display = "";
+//     if (selection !== '') {
+//         bold_button.addEventListener("click", () => {
 
-    document.getElementsByClassName("font-color")[0].addEventListener("mouseleave",()=>{
+//             if (window.getSelection().anchorOffset != "0") {
 
-        let event = document.getElementsByTagName("ul")[0].addEventListener("mouseover",()=>{
-            document.getElementsByTagName("ul")[0].style.display = "";
-        })
+//                 let range = window.getSelection().getRangeAt(0);
+//                 const oldContent = document.createTextNode(range.toString());
+//                 const newElement = document.createElement("strong");
+//                 newElement.append(oldContent);
+//                 range.deleteContents();
+//                 range.insertNode(newElement);
 
-        if (!event) {
-            document.getElementsByTagName("ul")[0].style.display = "none";
-        }
+//             } else {
 
-    })
-
-    document.getElementsByTagName("ul")[0].addEventListener("mouseleave",()=>{
-        document.getElementsByTagName("ul")[0].style.display = "none";
-    })
-
-})
-
-let p = document.getElementsByClassName("contain")[0];
-let bold_button = document.getElementsByClassName("bold")[0];
-let sheet = document.getElementsByClassName("sheet")[0];
-
-sheet.addEventListener('mouseup', (e) => {
-    let selection = window.getSelection().toString();
-
-    if (selection !== '') {
-        bold_button.addEventListener("click", () => {
-
-            if (window.getSelection().anchorOffset != "0") {
-
-                let range = window.getSelection().getRangeAt(0);
-                const oldContent = document.createTextNode(range.toString());
-                const newElement = document.createElement("strong");
-                newElement.append(oldContent);
-                range.deleteContents();
-                range.insertNode(newElement);
-
-            } else {
-
-                console.log(window.getSelection())
-                p.innerHTML = p.innerHTML.replace("<strong>" + selection + "</strong>", selection);
-                selection = "";
-            }
+//                 console.log(window.getSelection())
+//                 p.innerHTML = p.innerHTML.replace("<strong>" + selection + "</strong>", selection);
+//                 selection = "";
+//             }
         
-        })
-    }
+//         })
+//     }
+
+
+//________________INTEGRATION-DU-CODE-DE-L-EQUIPE__________________
     
+
+
+let text = document.getElementById("textZone");
+let textarea = document.getElementById("textarea");
+let bBold = document.getElementById("bold");
+let bItalic = document.getElementById("italic");
+let bSurlign = document.getElementById("underline");
+let bStrike = document.getElementById("strike");
+let bOrange = document.getElementById("orange");
+let bPurple = document.getElementById("purple");
+let bGreen = document.getElementById("green");
+let bRed = document.getElementById("red");
+let bLeft = document.getElementById("left");
+let bRight = document.getElementById("right");
+let bCenter = document.getElementById("center");
+let bJustify = document.getElementById("justify");
+// let bBold = document.getElementById("bold");
+// let bBold = document.getElementById("bold");
+// let bBold = document.getElementById("bold");
+
+bBold.onclick = bold(text, textarea);
+bItalic.onclick = italic(text, textarea);
+bSurlign.onclick = underline(text, textarea);
+bStrike.onclick = strike(text, textarea);
+bOrange.onclick = orange(text, textarea);
+bPurple.onclick = purple(text, textarea);
+bGreen.onclick = green(text, textarea);
+bRed.onclick = red(text, textarea);
+bLeft.onclick = alignLeft(text, textarea);
+bRight.onclick = alignRight(text, textarea);
+bCenter.onclick = alignCenter(text, textarea);
+bJustify.onclick = justify(text, textarea);
+
+textarea.onkeyup = getUpdate;
+
+function getUpdate() {
+    text.innerHTML = textarea.value;
+}
 
     // TEST___________________
 
@@ -90,7 +108,7 @@ sheet.addEventListener('mouseup', (e) => {
     //     console.log(window.getSelection().anchorOffset);
     //     console.log(selection);
     //     selection = "";
-});
+//});
 
 
 //}

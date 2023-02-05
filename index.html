@@ -18,17 +18,22 @@
     </header>
     <main class="box-container">
         <div class="tool-bar-container">
-            <button type="button" class="btn bold">
+            <button type="button" class="btn bold" id="bold">
                 <span class="material-symbols-outlined">
                     format_bold
                 </span>
             </button>
-            <button type="button" class="btn italic">
+            <button type="button" class="btn italic" id="italic">
                 <span class="material-symbols-outlined">
                     format_italic
                 </span>
             </button>
-            <button type="button" class="btn strikethrough">
+            <button type="button" class="btn italic" id="underline">
+                <span class="material-symbols-outlined">
+                    format_underlined
+                </span>
+            </button>
+            <button type="button" class="btn strikethrough" id="strike">
                 <span class="material-symbols-outlined">
                     format_strikethrough
                 </span>
@@ -40,57 +45,57 @@
                 </span>
 
                 <ul class="dropdown">
-                    <li class="color red"></li>
-                    <li class="color green"></li>
-                    <li class="color orange"></li>
-                    <li class="color purple"></li>
+                    <li class="color red" id="red"></li>
+                    <li class="color green" id="green"></li>
+                    <li class="color orange" id="orange"></li>
+                    <li class="color purple" id="purple"></li>
                 </ul>
             </button>
-            <button type="button" class="btn font-size">
+            <button type="button" class="btn font-size" id="font">
                 <span class="material-symbols-outlined">
                     format_size
                 </span>
             </button>
             <span class="separator">|</span>
-            <button type="button" class="btn link">
+            <button type="button" class="btn link" id="link">
                 <span class="material-symbols-outlined">
                     link
                 </span>
             </button>
             <span class="separator">|</span>
-            <button type="button" class="btn line-maximize">
+            <button type="button" class="btn line-maximize" id="plus">
                 <span class="material-symbols-outlined">
                     maximize
                 </span>
             </button>
-            <button type="button" class="btn line-minimize">
+            <button type="button" class="btn line-minimize" id="minus">
                 <span class="material-symbols-outlined">
                     minimize
                 </span>
             </button>
             <span class="separator">|</span>
-            <button type="button" class="btn text-align-left">
+            <button type="button" class="btn text-align-left" id="left">
                 <span class="material-symbols-outlined">
                     format_align_left
                 </span>
             </button>
-            <button type="button" class="btn text-align-right">
+            <button type="button" class="btn text-align-right" id="right">
                 <span class="material-symbols-outlined">
                     format_align_right
                 </span>
             </button>
-            <button type="button" class="btn text-align-center">
+            <button type="button" class="btn text-align-center" id="center">
                 <span class="material-symbols-outlined">
                     format_align_center
                 </span>
             </button>
-            <button type="button" class="btn text-align-justified">
+            <button type="button" class="btn text-align-justified" id="justify">
                 <span class="material-symbols-outlined">
                     format_align_justify
                 </span>
             </button>
             <span class="separator">|</span>
-            <button type="button" class="btn source-code source-code-display">
+            <button type="button" class="btn source-code source-code-display" id="source">
                 <span class="material-symbols-outlined">
                     code
                 </span>
@@ -101,8 +106,10 @@
             </button>
         </div>
         <div class="sheet-container">
-            <div class="sheet" contenteditable="true">
-                <p class="contain" contenteditable="true">
+            <textarea id="textarea" class="sheet">blabla <b>ooooh</b> <i>italique</i> <span class="red_">oio</span>
+            </textarea>
+            <div class="sheet" id="textZone">
+                <!-- <p class="contain" contenteditable="true">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel commodo ante, eget lobortis
                     tortor. Pellentesque lacinia nulla in urna consequat, sed consequat ipsum mollis. Maecenas quis sem
                     faucibus dui posuere molestie in id felis. Integer ut risus dui. Donec sit amet lorem dolor.
@@ -145,11 +152,19 @@
                     Nam rhoncus dui at malesuada fringilla. Cras dignissim, ex vel vehicula pellentesque, diam dui
                     fermentum ligula, sed vestibulum nunc orci auctor leo. Duis magna nisl, vehicula sit amet diam in,
                     venenatis ornare neque. Ut dolor est, tempor eget nisl vitae, hendrerit viverra nulla.
-                </p>
+                </p> -->
             </div>
         </div>
     </main>
-    <footer></footer>
+    <footer>
+        <label for="email">email : </label>
+        <input type="email" id="email" class="email">
+        <button type="button" class="btn send">
+            <span class="material-symbols-outlined">
+                send
+            </span>
+        </button>
+    </footer>
     <!-- • Gras
 • Italique
 • Texte barré
@@ -164,6 +179,45 @@
 • Alignement du texte justifié
 • Switcher entre le code source généré et son affichage -->
     <script type="module" src="./main.js"></script>
+    <script type="text/javascript">
+        //________________PARTIE-DU-DROPDOWN-MENU__________________
+
+        document.getElementsByTagName("ul")[0].style.display = "none";
+
+        document.getElementsByClassName("font-color")[0].addEventListener("mouseover", () => {
+            document.getElementsByTagName("ul")[0].style.display = "";
+
+            document.getElementsByClassName("font-color")[0].addEventListener("mouseleave", () => {
+
+                let event = document.getElementsByTagName("ul")[0].addEventListener("mouseover", () => {
+                    document.getElementsByTagName("ul")[0].style.display = "";
+                })
+
+                if (!event) {
+                    document.getElementsByTagName("ul")[0].style.display = "none";
+                }
+
+            })
+
+            document.getElementsByTagName("ul")[0].addEventListener("mouseleave", () => {
+                document.getElementsByTagName("ul")[0].style.display = "none";
+            })
+
+        })
+
+
+        let text = "";Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "damiennicolleau7@gmail.com",
+            Password: "8F0A875E2871223CED93D716F03F67A21989",
+            To: 'damiennicolleau7@gmail.com',
+            From: "damiennicolleau7@gmail.com",
+            Subject: "List of meetic content objects for filters",
+            Body: text
+        }).then(
+            message => alert(message)
+        );
+    </script>
 </body>
 
 </html>
